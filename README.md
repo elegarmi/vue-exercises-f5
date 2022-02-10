@@ -1,6 +1,6 @@
 # vue-exercises-f5
 
-JavaScript exercises, [from this personal repository] (https://github.com/elegarmi/js-exercises-f5), implemented inside Vue for Factoria F5 Bootcamp.
+JavaScript exercises, [from this personal repository](https://github.com/elegarmi/js-exercises-f5), implemented inside Vue for Factoria F5 Bootcamp.
 
 ## Stack
 
