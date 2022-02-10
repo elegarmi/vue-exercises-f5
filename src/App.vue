@@ -73,6 +73,10 @@ export default {
         }
       }
     }
+
+    #result-container {
+      margin-top: 2rem;
+    }
   }
 }
 </style>

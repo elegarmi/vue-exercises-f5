@@ -10,15 +10,21 @@
     <v-toolbar dark class="d-flex justify-space-around form-container">
       <v-toolbar-title>How old are you?</v-toolbar-title>
       <v-form ref="form" class="d-inline-flex">
-        <v-text-field label="Age" counter maxlength="3" required></v-text-field>
+        <v-text-field
+          label="Age"
+          counter
+          maxlength="3"
+          required
+          id="age-input"
+        ></v-text-field>
 
-        <v-btn class="grey darken-1" type="submit" v-on:click="adult">
-          submit
-        </v-btn>
+        <v-btn class="grey darken-1" v-on:click="isAdult()"> submit </v-btn>
       </v-form>
     </v-toolbar>
 
-    <div id="result-container"></div>
+    <div id="result-container">
+      <h2 id="result"></h2>
+    </div>
   </v-container>
 </template>
 
@@ -26,17 +32,18 @@
 export default {
   name: "Exercises",
 
-  data: () => ({}),
-
   methods: {
-    adult: function () {
-      let container = document.getElementById("result-container");
+    isAdult() {
+      let container = document.getElementById("result");
       // let age = parseInt(prompt('Enter your age'));
       let age = document.getElementById("age-input").value;
       let driver = age < 18 ? "You cannot drive" : "You can drive";
 
-      container.innerHTML = driver;
-      alert(driver);
+      if (!age) {
+        container.innerHTML = "You should enter a num";
+      } else {
+        container.innerHTML = driver;
+      }
     },
   },
 };
