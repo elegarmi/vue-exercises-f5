@@ -33,12 +33,24 @@ export default {
 
   header a {
     color: #ffffff;
-    margin: 0.4em;
+    margin: 0.4rem;
     padding: 0.5rem;
     text-decoration: none;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  #nav-menu {
+    // .v-list { // Scrollable menu
+    //   height: 15rem;
+    //   overflow-y: auto;
+    // }
+
+    a {
+      margin: 0;
+      padding: 0 0.5rem;
     }
   }
 
