@@ -1,44 +1,43 @@
 <template>
-  <v-list class="d-inline-flex pa-0" id="nav-menu">
-    <v-list-item offset-x right>
-      <v-list-item-icon>
-        <v-icon>mdi-home</v-icon>
-      </v-list-item-icon>
-
-      <v-list-item-title>Home</v-list-item-title>
-    </v-list-item>
-
-    <v-list-group :value="false" prepend-icon="mdi-school">
-      <template v-slot:activator>
-        <v-list-item-content>
-          <v-list-item-title>Exercises</v-list-item-title>
-        </v-list-item-content>
+  <div class="nav-menu-container">
+    <v-menu bottom :offset-y="offset">
+      <template v-slot:activator="{ on, attrs }">
+        <a href="/">
+          <v-btn dark v-bind="attrs" v-on="on"
+            ><v-icon>mdi-home</v-icon>Home
+          </v-btn>
+        </a>
+      </template>
+    </v-menu>
+    <v-menu bottom :offset-y="offset">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn dark v-bind="attrs" v-on="on"
+          ><v-icon>mdi-school</v-icon> Exercises
+        </v-btn>
       </template>
 
-      <v-list-item v-for="(link, i) in exercises" :key="i" :href="link.href">
-        <v-list-item-title v-text="link.text"></v-list-item-title>
-      </v-list-item>
-    </v-list-group>
-  </v-list>
+      <v-list>
+        <v-list-item
+          v-for="(item, index) in items"
+          :key="index"
+          :href="item.href"
+        >
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+  </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    exercises: [
-      {
-        text: "Exercise 17",
-        href: "#",
-      },
-      {
-        text: "Exercise 18",
-        href: "#",
-      },
-      {
-        text: "Exercise 19",
-        href: "#",
-      },
+    items: [
+      { title: "Exercise 17", href: "/exercise17" },
+      { title: "Exercise 18", href: "/exercise18" },
+      { title: "Exercise 19", href: "/exercise19" },
     ],
+    offset: true,
   }),
 };
 </script>

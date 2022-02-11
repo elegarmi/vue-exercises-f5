@@ -37,20 +37,18 @@ export default {
     padding: 0.5rem;
     text-decoration: none;
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.4);
-    }
+    // &:hover {
+    //   background-color: rgba(255, 255, 255, 0.4);
+    // }
   }
 
-  #nav-menu {
-    // .v-list { // Scrollable menu
-    //   height: 15rem;
-    //   overflow-y: auto;
-    // }
+  .nav-menu-container {
+    & > * {
+      margin: 0.6rem;
+    }
 
-    a {
-      margin: 0;
-      padding: 0 0.5rem;
+    i {
+      margin: 0.8rem 0.8rem 0.8rem 0;
     }
   }
 

@@ -20,10 +20,31 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
-    path: "/exercises",
+    path: "/exercise17",
     name: "Exercises",
     component: () =>
-      import(/* webpackChunkName: "exercises" */ "../views/Exercises.vue"),
+      import(
+        /* webpackChunkName: "exercises" */
+        "../components/exercises/ExerciseSeventeen.vue"
+      ),
+  },
+  {
+    path: "/exercise18",
+    name: "Exercises",
+    component: () =>
+      import(
+        /* webpackChunkName: "exercises" */
+        "../components/exercises/ExerciseEighteen.vue"
+      ),
+  },
+  {
+    path: "/exercise19",
+    name: "Exercises",
+    component: () =>
+      import(
+        /* webpackChunkName: "exercises" */
+        "../components/exercises/ExerciseNineteen.vue"
+      ),
   },
 ];
 
