@@ -36,17 +36,8 @@ export default {
     result: {},
   },
 
-  // data() {
-  //   return {
-  //     result: this.value,
-  //   };
-  // },
-
   methods: {
     reportCard() {
-      // let container = document.getElementById("result");
-      // let num = document.getElementById("num-input").value;
-
       if (this.num <= 10) {
         if (this.num > 0 && this.num < 3) {
           this.result = "Too poor";

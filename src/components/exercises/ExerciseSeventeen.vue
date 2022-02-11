@@ -35,12 +35,7 @@ export default {
 
   props: {
     age: {},
-  },
-
-  data() {
-    return {
-      result: this.value,
-    };
+    result: {},
   },
 
   methods: {
