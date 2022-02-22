@@ -47,11 +47,11 @@ export default {
           this.result = "Below average";
         }
 
-        if (this.num == 5) {
+        if (this.num >= 5 && this.num < 6) {
           this.result = "Fair";
         }
 
-        if (this.num == 6) {
+        if (this.num >= 6 && this.num < 7) {
           this.result = "Good";
         }
 
