@@ -12,7 +12,7 @@
           v-model="num"
           label="Num"
           counter
-          maxlength="2"
+          maxlength="3"
           required
           id="num-input"
         ></v-text-field>
@@ -40,27 +40,27 @@ export default {
     reportCard() {
       if (this.num <= 10) {
         if (this.num > 0 && this.num < 3) {
-          this.result = "Too poor";
+          this.result = "Qualification: " + this.num + " -> Too poor";
         }
 
         if (this.num >= 3 && this.num < 5) {
-          this.result = "Below average";
+          this.result = "Qualification: " + this.num + " -> Below average";
         }
 
         if (this.num >= 5 && this.num < 6) {
-          this.result = "Fair";
+          this.result = "Qualification: " + this.num + " -> Fair";
         }
 
         if (this.num >= 6 && this.num < 7) {
-          this.result = "Good";
+          this.result = "Qualification: " + this.num + " -> Good";
         }
 
         if (this.num >= 7 && this.num < 9) {
-          this.result = "Merit";
+          this.result = "Qualification: " + this.num + " -> Merit";
         }
 
         if (this.num >= 9 && this.num < 10) {
-          this.result = "Distinction";
+          this.result = "Qualification: " + this.num + " -> Distinction";
         }
       }
 
