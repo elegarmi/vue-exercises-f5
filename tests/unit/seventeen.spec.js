@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import ExerciseSeventeen from "@/components/ExerciseSeventeen";
+import ExerciseSeventeen from "@/components/exercises/ExerciseSeventeen";
 
 let wrapper = null;
 

@@ -21,7 +21,7 @@ const routes = [
   },
   {
     path: "/exercise17",
-    name: "Exercises",
+    name: "Exercise 17",
     component: () =>
       import(
         /* webpackChunkName: "exercises" */
@@ -30,7 +30,7 @@ const routes = [
   },
   {
     path: "/exercise18",
-    name: "Exercises",
+    name: "Exercise 18",
     component: () =>
       import(
         /* webpackChunkName: "exercises" */
@@ -39,7 +39,7 @@ const routes = [
   },
   {
     path: "/exercise19",
-    name: "Exercises",
+    name: "Exercise 19",
     component: () =>
       import(
         /* webpackChunkName: "exercises" */
