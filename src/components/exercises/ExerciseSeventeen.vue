@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-spacer></v-spacer>
-    <h1 class="display-2 font-weight-bold mb-3">Exercise Seventeen</h1>
+    <h1 class="display-2 font-weight-bold mb-3">Exercise 17</h1>
 
     <p class="subheading font-weight-regular">
       Check if user is old enough to drive
@@ -11,6 +11,7 @@
       <v-toolbar-title>How old are you?</v-toolbar-title>
       <v-form ref="form" class="d-inline-flex">
         <v-text-field
+          v-model="age"
           label="Age"
           counter
           maxlength="3"
@@ -23,7 +24,7 @@
     </v-toolbar>
 
     <div id="result-container">
-      <h2 id="result"></h2>
+      <h2 id="result">{{ result }}</h2>
     </div>
   </v-container>
 </template>
@@ -32,18 +33,19 @@
 export default {
   name: "Exercises",
 
+  props: {
+    age: {},
+    result: {},
+  },
+
   methods: {
     isAdult() {
-      let container = document.getElementById("result");
-      // let age = parseInt(prompt('Enter your age'));
-      let age = document.getElementById("age-input").value;
-      let driver = age < 18 ? "You cannot drive" : "You can drive";
-
-      if (!age) {
-        container.innerHTML = "You should enter a num";
+      if (!this.age) {
+        this.result = "You should enter a num";
       } else {
-        container.innerHTML = driver;
+        this.result = this.age < 18 ? "You cannot drive" : "You can drive";
       }
+      this.age = "";
     },
   },
 };

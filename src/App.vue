@@ -33,12 +33,22 @@ export default {
 
   header a {
     color: #ffffff;
-    margin: 0.4em;
+    margin: 0.4rem;
     padding: 0.5rem;
     text-decoration: none;
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.4);
+    // &:hover {
+    //   background-color: rgba(255, 255, 255, 0.4);
+    // }
+  }
+
+  .nav-menu-container {
+    & > * {
+      margin: 0.6rem;
+    }
+
+    i {
+      margin: 0.8rem 0.8rem 0.8rem 0;
     }
   }
 
